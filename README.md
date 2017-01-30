@@ -40,7 +40,7 @@ npm test
 
 Test Lambda Function locally
 ```
-serverless invoke local -l -f tweetPet
+serverless invoke local -l -f replyToTweets
 ```
 
 ## Deployment
