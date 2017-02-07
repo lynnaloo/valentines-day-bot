@@ -1,9 +1,9 @@
 # Valentine's Day Bot
 
 > :heart: :cat:
-
+>
 > Tweets a special reply to mentions using the correct hashtag.
-
+>
 > Uses Serverless framework and AWS Lambda
 
 ## Install
@@ -40,7 +40,8 @@ npm test
 
 Test Lambda Function locally
 ```
-serverless invoke local -l -f replyToTweets
+serverless invoke local -l -f reply
+
 ```
 
 ## Deployment

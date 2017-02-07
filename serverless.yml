@@ -47,7 +47,7 @@ provider:
 #    - exclude-me-dir/**
 
 functions:
-  tweetPet:
+  reply:
     handler: handlers/replyToTweets.replyToTweets
     description: Scans replies and responds # description to publish to AWS
     memorySize: 1024 # default is 1024
