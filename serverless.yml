@@ -36,6 +36,7 @@ provider:
     TWIT_ACCESS_TOKEN: ${file(./env.json):TWIT_ACCESS_TOKEN}
     TWIT_ACCESS_TOKEN_SECRET: ${file(./env.json):TWIT_ACCESS_TOKEN_SECRET}
     TWIT_TIMEOUT_MS: ${file(./env.json):TWIT_TIMEOUT_MS}
+    TWIT_HASHTAG: ${file(./env.json):TWIT_HASHTAG}
 
 # you can add packaging information here
 #package:

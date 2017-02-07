@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports.replyToTweets = (event, context, callback) => {
-  const Tweet = require('../lib/Tweet');
+  const Tweet = require('../lib/tweet');
   const twitterConfig = {
     consumer_key: process.env.TWIT_API_KEY,
     consumer_secret: process.env.TWIT_API_KEY_SECRET,
@@ -11,7 +11,7 @@ module.exports.replyToTweets = (event, context, callback) => {
   };
   const tweet = new Tweet(twitterConfig);
 
-  tweet.reply('#happyvalentinebot')
+  tweet.reply(process.env.TWIT_HASHTAG)
   .then((data) => {
     const response = {
       statusCode: 200,
