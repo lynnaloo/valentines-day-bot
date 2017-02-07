@@ -6,6 +6,10 @@
 >
 > Uses Serverless framework and AWS Lambda
 
+## Try it out
+
+Mention `@thesecatstweet` in a tweet and don't forget the hashtag `#happyvalentinebot`.
+
 ## Install
 
 With [node](https://nodejs.org/) installed, install the Serverless Architecture:
