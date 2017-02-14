@@ -16,9 +16,9 @@ This is a demonstration project for Serverless bots inspired by other useful bot
 and other cute bots.
 
 *   The `handleMentions` function does scheduled polling of mentions to perform replies
-    (if you want a 100% Serverless application)
-*   The `reply` function performs just the favoriting and reply to mention (meant
-    to be called by the Twitter Streams API)
+    (if you want a :100: Serverless application)
+*   The `reply` function performs just the favoriting and reply to a mention
+    (can be called by the Twitter Streams API)
 
 ## Install
 
@@ -57,7 +57,6 @@ Test Lambda Function locally
 
 ```
 serverless invoke local -l -f handleMentions
-
 ```
 
 ## Deployment
