@@ -1,6 +1,11 @@
 'use strict';
 
-module.exports.replyToTweets = (event, context, callback) => {
+module.exports.reply = (event, context, callback) => {
+  if (!event.Records) {
+    console.log(`event: ${event}`);
+    return callback(null, 'No SNS message found.');
+  }
+
   const Tweet = require('../lib/tweet');
   const twitterConfig = {
     consumer_key: process.env.TWIT_API_KEY,
@@ -11,12 +16,16 @@ module.exports.replyToTweets = (event, context, callback) => {
   };
   const tweet = new Tweet(twitterConfig);
 
-  tweet.replyToMentions(process.env.TWIT_HASHTAG)
+  const message = event.Records[0].Sns.Message;
+  console.log(`message from SNS: ${JSON.stringify(message)}`);
+
+  // Respond to mention from event
+  tweet.reply(message.tweet)
   .then((data) => {
     const response = {
       statusCode: 200,
       body: JSON.stringify({
-        message: 'Replies to mentions were sent successfully',
+        message: 'Replies to tweet was sent successfully',
         data: event
       }),
     };

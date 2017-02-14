@@ -48,13 +48,22 @@ provider:
 #    - exclude-me-dir/**
 
 functions:
-  reply:
+  handleMentions:
     handler: handlers/replyToTweets.replyToTweets
-    description: Scans replies and responds # description to publish to AWS
+    description: Scans mentions and responds # description to publish to AWS
     memorySize: 1024 # default is 1024
     timeout: 15 # default is 6
     events:
       - schedule: rate(3 minutes)
+
+  reply:
+    handler: handlers/reply.reply
+    description: Replies to tweets # description to publish to AWS
+    memorySize: 1024 # default is 1024
+    timeout: 15 # default is 6
+    events:
+      - sns: twitter-mention
+      - displayName: Twitter mention from Streaming API
 
 #    Define function environment variables here
 #    environment:

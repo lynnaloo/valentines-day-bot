@@ -2,13 +2,23 @@
 
 > :heart: :cat:
 >
-> Tweets a special reply to mentions using the correct hashtag.
+> Tweets a special reply to mentions using the correct #hashtag.
 >
-> Uses Serverless framework and AWS Lambda
+> Uses Serverless framework and AWS Lambda.
 
 ## Try it out
 
 Mention `@thesecatstweet` in a tweet and don't forget the hashtag `#happyvalentinebot`.
+
+## About
+
+This is a demonstration project for Serverless bots inspired by other useful bots
+and other cute bots.
+
+*   The `handleMentions` function does scheduled polling of mentions to perform replies
+    (if you want a 100% Serverless application)
+*   The `reply` function performs just the favoriting and reply to mention (meant
+    to be called by the Twitter Streams API)
 
 ## Install
 
@@ -38,13 +48,15 @@ Setup your Account Provider and Credentials
 *   [AWS account credentials](https://serverless.com/framework/docs/providers/aws/guide/credentials)
 
 Run Unit Tests
+
 ```
 npm test
 ```
 
 Test Lambda Function locally
+
 ```
-serverless invoke local -l -f reply
+serverless invoke local -l -f handleMentions
 
 ```
 
@@ -58,7 +70,9 @@ $ sls deploy -v
 
 ## See Also
 
-*   [Serverless Framwork](http://www.serverless.com)
+*   [Serverless Framework](http://www.serverless.com)
+*   [Adopt-a-Pet Bot](https://github.com/lynnaloo/adoptable-pet-bot)
+*   [Rachel's Cute Bot](https://github.com/rachelnicole/magicalncute)
 
 ## License
 
