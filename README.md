@@ -6,6 +6,9 @@
 >
 > Uses Serverless framework and AWS Lambda.
 
+[![Made with Serverless](https://img.shields.io/badge/serverless-⚡-yellow.svg?style=flat-square)](https://serverless.io)
+[![Norfolk JS Inspired](https://img.shields.io/badge/NorfolkJS-inspired-f3df49.svg?style=flat-square)](https://norfolkjs.org)
+
 ## Try it out
 
 Mention `@thesecatstweet` in a tweet and don't forget the hashtag `#happyvalentinebot`.
