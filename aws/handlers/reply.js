@@ -12,7 +12,7 @@ module.exports.reply = (event, context, callback) => {
     consumer_secret: process.env.TWIT_API_KEY_SECRET,
     access_token: process.env.TWIT_ACCESS_TOKEN,
     access_token_secret: process.env.TWIT_ACCESS_TOKEN_SECRET,
-    timeout_ms: process.env.TWIT_TIMEOUT_MS,
+    timeout_ms: process.env.TWIT_TIMEOUT_MS
   };
   const tweet = new Tweet(twitterConfig);
 
@@ -27,7 +27,7 @@ module.exports.reply = (event, context, callback) => {
       body: JSON.stringify({
         message: 'Replies to tweet was sent successfully',
         data: event
-      }),
+      })
     };
 
     callback(null, response);

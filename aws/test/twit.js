@@ -12,7 +12,7 @@ describe('twit', () => {
         consumer_secret: '123',
         access_token: '123',
         access_token_secret: '123',
-        timeout_ms: 60000,
+        timeout_ms: 60000
       };
       const twit = new Twit(twitterConfig);
 
