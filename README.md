@@ -29,6 +29,7 @@ With [node](https://nodejs.org/) installed, install the Serverless Architecture:
 
 ```
 $ npm i -g serverless
+$ npm i -g yarn
 ```
 
 Clone this repository
@@ -37,10 +38,11 @@ Clone this repository
 $ git clone git@github.com:lynnaloo/valentines-day-bot.git
 ```
 
-Install dependencies
+Install dependencies 
 
 ```
-$ npm i
+$ cd aws
+$ yarn install
 ```
 
 ## Setup and Testing
@@ -49,6 +51,22 @@ Setup your Account Provider and Credentials
 
 *   [AWS Lambda](https://serverless.com/framework/docs/providers/aws/setup)
 *   [AWS account credentials](https://serverless.com/framework/docs/providers/aws/guide/credentials)
+
+Add your images bucket and Twitter Credentials
+
+* Create a file called `env.json` with these contents:
+
+```
+{
+  "TWIT_API_KEY": "xxxxxxx",
+  "TWIT_API_KEY_SECRET": "xxxxxxx",
+  "TWIT_ACCESS_TOKEN": "xxxxx",
+  "TWIT_ACCESS_TOKEN_SECRET": "xxxxxxx",
+  "TWIT_TIMEOUT_MS": 60000,
+  "TWIT_HASHTAG": "#happyvalentinebot",
+  "S3_BUCKET": "bucket-o-gifs"
+}
+```
 
 Run Unit Tests
 

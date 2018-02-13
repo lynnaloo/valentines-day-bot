@@ -8,7 +8,7 @@ class Images {
   constructor() {
     this.s3Params = {
       Bucket: process.env.S3_BUCKET,
-      Delimiter: '/',
+      Delimiter: '/'
     };
   }
 

@@ -12,7 +12,7 @@ describe('tweet', () => {
         consumer_secret: '1234',
         access_token: 'abcd',
         access_token_secret: 'abcd',
-        timeout_ms: 1000,
+        timeout_ms: 1000
       }, 'abcd', '12345');
 
       assert(tweet.twitter);
