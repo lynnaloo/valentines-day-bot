@@ -26,7 +26,7 @@ functions:
     memorySize: 1024 # default is 1024
     timeout: 15 # default is 6
     events:
-      - schedule: rate(3 minutes)
+      - schedule: rate(2 minutes)
 
   reply:
     handler: handlers/reply.reply
