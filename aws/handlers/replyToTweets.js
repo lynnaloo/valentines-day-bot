@@ -11,7 +11,7 @@ module.exports.replyToTweets = (event, context, callback) => {
   };
   const tweet = new Tweet(twitterConfig);
 
-  tweet.replyToMentions(process.env.TWIT_HASHTAG)
+  tweet.replyToMentions(process.env.TWIT_HASHTAG || '#valentinebot')
   .then((data) => {
     const response = {
       statusCode: 200,

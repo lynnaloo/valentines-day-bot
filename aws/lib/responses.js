@@ -1,9 +1,10 @@
 'use strict';
 
 module.exports = [
-  'Happy Valentine\'s Day! You\'ll never be null in my interpreter.',
-  'Happy Valentine\'s Day! My response to you is never undefined.',
-  'Happy Valentine\'s Day! Our friendship has no bugs!',
-  'Happy Valentine\'s Day! You\'re my favorite human.',
-  'Happy Valentine\'s Day! We connect like good wifi!'
+  'you\'ll never be null in my interpreter.',
+  'my response to you is never undefined.',
+  'our friendship has no bugs!',
+  'you\'re my favorite human.',
+  'we connect like good wifi!',
+  'Serverless has servers and you have a Valentine!'
 ];

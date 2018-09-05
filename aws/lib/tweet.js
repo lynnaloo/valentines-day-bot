@@ -10,7 +10,7 @@ class Tweet {
     this.twitter = new Twitter(twitterConfig);
   }
 
-  // Get all mentions and filter by hastag and favorite flag
+  // Get all mentions and filter by hashtag and favorite flag
   getMentions(hashtag) {
     return this.twitter.getMentions()
     .then((mentions) => {
@@ -40,7 +40,7 @@ class Tweet {
     const text = _.sample(responses);
 
     console.log(`Replying to @${replyTo}`);
-    const message = `@${replyTo} Hey ${replyName}, ${text}`;
+    const message = `@${replyTo} Hi ${replyName}, ${text}`;
 
     // favorite each tweet so we know which ones we've processed already
     return this.twitter.favoriteTweet(id)
