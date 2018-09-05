@@ -6,5 +6,6 @@ module.exports = [
   'our friendship has no bugs!',
   'you\'re my favorite human.',
   'we connect like good wifi!',
-  'Serverless has servers and you have a Valentine!'
+  'you are just my type!',
+  'serverless has servers and you have a Valentine!'
 ];
