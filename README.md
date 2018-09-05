@@ -11,7 +11,7 @@
 
 ## Try it out
 
-Mention `@thesecatstweet` in a tweet and don't forget the hashtag `#happyvalentinebot`.
+Mention `@thesecatstweet` in a tweet and don't forget the hashtag `#valentinebot`.
 
 ## About
 
