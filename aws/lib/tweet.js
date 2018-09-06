@@ -40,7 +40,7 @@ class Tweet {
     const text = _.sample(responses);
 
     console.log(`Replying to @${replyTo}`);
-    const message = `@${replyTo} Hi ${replyName}, ${text}`;
+    const message = `@${replyTo} Hi ${replyName}! ${text}`;
 
     // favorite each tweet so we know which ones we've processed already
     return this.twitter.favoriteTweet(id)
