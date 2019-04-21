@@ -1,4 +1,8 @@
-# package directories
+
+
+// Enable telemetry collection with Application Insights
+var ai = require('applicationinsights');
+ai.setup(process.env.APPLICATIONINSIGHTSKEY || '1089076f-17ba-4407-a338-9cac39da3d7c').start();# package directories
 node_modules
 jspm_packages
 

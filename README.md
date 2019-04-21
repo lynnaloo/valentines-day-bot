@@ -29,6 +29,7 @@ With [node](https://nodejs.org/) installed, install the Serverless Architecture:
 
 ```
 $ npm i -g serverless
+$ npm i -g serverless-azure-functions
 $ npm i -g yarn
 ```
 
@@ -41,18 +42,17 @@ $ git clone git@github.com:lynnaloo/valentines-day-bot.git
 Install dependencies 
 
 ```
-$ cd aws
+$ cd azure
 $ yarn install
 ```
 
 ## Setup and Testing
 
 Setup your Account Provider and Credentials
-
-*   [AWS Lambda](https://serverless.com/framework/docs/providers/aws/setup)
+*   [Azure Cloud account credentials](https://serverless.com/framework/docs/providers/azure/guide/credentials/) 
 *   [AWS account credentials](https://serverless.com/framework/docs/providers/aws/guide/credentials)
 
-Add your images bucket and Twitter Credentials
+Add your images storage bucket and Twitter Credentials
 
 * Create a file called `env.json` with these contents:
 
@@ -64,7 +64,7 @@ Add your images bucket and Twitter Credentials
   "TWIT_ACCESS_TOKEN_SECRET": "xxxxxxx",
   "TWIT_TIMEOUT_MS": 60000,
   "TWIT_HASHTAG": "#happyvalentinebot",
-  "S3_BUCKET": "bucket-o-gifs"
+  "BUCKET": "bucket-o-gifs"
 }
 ```
 
@@ -74,7 +74,7 @@ Run Unit Tests
 npm test
 ```
 
-Test Lambda Function locally
+Test Function locally
 
 ```
 serverless invoke local -l -f handleMentions
@@ -82,7 +82,7 @@ serverless invoke local -l -f handleMentions
 
 ## Deployment
 
-Deploy Lambda Functions
+Deploy Functions
 
 ```
 $ sls deploy -v
