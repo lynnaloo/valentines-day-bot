@@ -42,3 +42,5 @@ happy-photo.jpg
 .serverless
 awscli-bundle
 awscli-bundle.zip
+
+.vscode/
