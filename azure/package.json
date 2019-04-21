@@ -30,6 +30,6 @@
 		"eslint": "^3.7.1",
 		"eslint-config-cloudreach": "1.0.2",
 		"mocha": "^3.2.0",
-		"serverless-azure-functions": "*"
+		"serverless-azure-functions": "^0.2.0"
 	}
 }

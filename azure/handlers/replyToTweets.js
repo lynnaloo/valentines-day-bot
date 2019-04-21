@@ -1,6 +1,6 @@
 'use strict';
 
-module.exports.replyToTweets = (event, context, callback) => {
+module.exports.replyToTweets = (context, event) => {
   const Tweet = require('../lib/tweet');
   const twitterConfig = {
     consumer_key: process.env.TWIT_API_KEY,
@@ -14,16 +14,16 @@ module.exports.replyToTweets = (event, context, callback) => {
   tweet.replyToMentions(process.env.TWIT_HASHTAG || '#valentinebot')
   .then((data) => {
     const response = {
-      statusCode: 200,
+      status: 200,
       body: JSON.stringify({
         message: 'Replies to mentions were sent successfully',
         data: event
       })
     };
 
-    callback(null, response);
+    context.done(response);
   })
   .catch((error) => {
-    console.log('Error executing Lambda function:', error);
+    console.log('Error executing cloud function:', error);
   });
 };

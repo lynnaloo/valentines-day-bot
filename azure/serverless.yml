@@ -11,14 +11,14 @@ plugins:
   - serverless-azure-functions
 
 # you can define service wide environment variables here
-  environment:
-    TWIT_API_KEY: ${file(./env.json):TWIT_API_KEY}
-    TWIT_API_KEY_SECRET: ${file(./env.json):TWIT_API_KEY_SECRET}
-    TWIT_ACCESS_TOKEN: ${file(./env.json):TWIT_ACCESS_TOKEN}
-    TWIT_ACCESS_TOKEN_SECRET: ${file(./env.json):TWIT_ACCESS_TOKEN_SECRET}
-    TWIT_TIMEOUT_MS: ${file(./env.json):TWIT_TIMEOUT_MS}
-    TWIT_HASHTAG: ${file(./env.json):TWIT_HASHTAG}
-    BUCKET: ${file(./env.json):BUCKET}
+environment:
+  TWIT_API_KEY: ${file(./env.json):TWIT_API_KEY}
+  TWIT_API_KEY_SECRET: ${file(./env.json):TWIT_API_KEY_SECRET}
+  TWIT_ACCESS_TOKEN: ${file(./env.json):TWIT_ACCESS_TOKEN}
+  TWIT_ACCESS_TOKEN_SECRET: ${file(./env.json):TWIT_ACCESS_TOKEN_SECRET}
+  TWIT_TIMEOUT_MS: ${file(./env.json):TWIT_TIMEOUT_MS}
+  TWIT_HASHTAG: ${file(./env.json):TWIT_HASHTAG}
+  BUCKET: ${file(./env.json):BUCKET}
 
 functions:
   handleMentions:
