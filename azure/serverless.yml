@@ -22,7 +22,7 @@ environment:
 
 functions:
   handleMentions:
-    handler: handlers/replyToTweets.replyToTweets
+    handler: handleMentions.replyToTweets
     events:
       - timer:
         x-azure-settings:

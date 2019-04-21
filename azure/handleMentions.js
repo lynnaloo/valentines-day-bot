@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports.replyToTweets = (context, event) => {
-  const Tweet = require('../lib/tweet');
+  const Tweet = require('./lib/tweet');
   const twitterConfig = {
     consumer_key: process.env.TWIT_API_KEY,
     consumer_secret: process.env.TWIT_API_KEY_SECRET,
